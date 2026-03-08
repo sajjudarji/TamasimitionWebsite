@@ -29,7 +29,7 @@ const Contact = () => {
             {[
               { icon: <Mail className="w-6 h-6" />, title: "Email", info: "tamashnation3d@gmail.com", color: "blue" },
               { icon: <Phone className="w-6 h-6" />, title: "Phone", info: "+91 9967307506", color: "purple" },
-              { icon: <MapPin className="w-6 h-6" />, title: "Studio", info: "Ovri Pada, Borivali (East)", color: "cyan" },
+              { icon: <MapPin className="w-6 h-6" />, title: "Studio", info: "Ovri Pada, Borivali (East), Mumbai, Maharashtra 400066", color: "cyan" },
               { icon: <Clock className="w-6 h-6" />, title: "Availability", info: "24/7 Production 365 Days", color: "pink" }
             ].map((contact, i) => (
               <GlowCard key={i} delay={i * 0.1} className="p-6" glowColor={`neon-${contact.color}`}>
