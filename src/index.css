@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-blue: #0ea5e9;
+  --neon-purple: #a855f7;
+  --neon-cyan: #22d3ee;
+  --deep-teal: #0d9488;
+  --navy-blue: #030014;
+}
+
+body {
+  @apply text-white selection:bg-neon-purple selection:text-white overflow-x-hidden;
+  background: radial-gradient(circle at top right, #0d948833, transparent), 
+              radial-gradient(circle at bottom left, #0ea5e922, transparent),
+              #030014;
+  font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.glass {
+  @apply backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl;
+}
+
+.glass-dark {
+  @apply backdrop-blur-xl bg-black/40 border border-white/10 shadow-2xl;
+}
+
+.glass-card {
+  @apply backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl shadow-2xl transition-all duration-300;
+}
+
+.glass-card:hover {
+  @apply border-white/30 bg-white/10 -translate-y-2;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-neon-blue via-neon-purple to-neon-cyan;
+}
+
+.glow-border {
+  position: relative;
+}
+
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  @apply rounded-xl bg-gradient-to-r from-neon-blue/50 to-neon-purple/50 opacity-0 transition-opacity duration-300;
+  z-index: -1;
+}
+
+.glow-border:hover::after {
+  @apply opacity-100;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+.mask-radial {
+  mask-image: radial-gradient(circle at center, black 0%, transparent 70%);
+}
+
+/* Scroll blurring navbar utility */
+.nav-blur-scroll {
+  @apply backdrop-blur-0 bg-transparent transition-all duration-300;
+}
+
+.nav-blur-scroll.scrolled {
+  @apply backdrop-blur-xl bg-[#030014]/80 border-b border-white/10;
+}
+
+.hover-underline {
+  @apply relative cursor-pointer;
+}
+
+.hover-underline::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-purple transition-all duration-300;
+}
+
+.hover-underline:hover::after {
+  @apply w-full;
+}
+
