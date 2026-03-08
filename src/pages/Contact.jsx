@@ -12,7 +12,7 @@ const Contact = () => {
             Let's <span className="text-gradient">Print</span> Together
           </Typography>
           <Typography className="text-gray-400 max-w-2xl mx-auto text-xl font-light">
-            Have a project in mind? Our engineering team is ready to bring your CAD files to life. 
+            Have a project in mind? Our engineering team is ready to bring your ideas to life. 
             Fill out the form below for a custom quote.
           </Typography>
         </AnimatedSection>
@@ -27,9 +27,9 @@ const Contact = () => {
             className="lg:col-span-4 flex flex-col gap-6"
           >
             {[
-              { icon: <Mail className="w-6 h-6" />, title: "Email", info: "hello@tamsimision.tech", color: "blue" },
-              { icon: <Phone className="w-6 h-6" />, title: "Phone", info: "+1 (555) 3D-PRINT", color: "purple" },
-              { icon: <MapPin className="w-6 h-6" />, title: "Studio", info: "Tech Valley, San Francisco, CA", color: "cyan" },
+              { icon: <Mail className="w-6 h-6" />, title: "Email", info: "tamashnation3d@gmail.com", color: "blue" },
+              { icon: <Phone className="w-6 h-6" />, title: "Phone", info: "+91 9967307506", color: "purple" },
+              { icon: <MapPin className="w-6 h-6" />, title: "Studio", info: "Ovri Pada, Borivali (East)", color: "cyan" },
               { icon: <Clock className="w-6 h-6" />, title: "Availability", info: "24/7 Production 365 Days", color: "pink" }
             ].map((contact, i) => (
               <GlowCard key={i} delay={i * 0.1} className="p-6" glowColor={`neon-${contact.color}`}>
@@ -105,9 +105,12 @@ const Contact = () => {
           </motion.div>
         </div>
         
-        {/* Map Section with Blur Frame */}
-        <AnimatedSection className="mt-24 h-[400px] relative rounded-[40px] overflow-hidden border border-white/10 group">
-          <div className="absolute inset-0 bg-dark-900 animate-pulse border-8 border-transparent" />
+        {/* Immersive Map Experience */}
+        <AnimatedSection className="mt-32 h-[550px] relative rounded-[3rem] overflow-hidden border border-white/5 shadow-[0_40px_100px_rgba(0,0,0,0.8)] group">
+          {/* Base Dark Layer */}
+          <div className="absolute inset-0 bg-black z-0" />
+          
+          {/* The High-Contrast Map */}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.8143248671!2d-122.5076402!3d37.757815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1709384400000!5m2!1sen!2sus"
             width="100%"

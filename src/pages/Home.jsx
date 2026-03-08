@@ -56,13 +56,13 @@ const Home = () => {
               Leading 3D Printing Excellence
             </motion.div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black mb-6 md:mb-8 leading-[1.1] tracking-tight text-white text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black mb-6 md:mb-8 leading-[1.1] tracking-tight text-theme text-left">
               Precision 3D <br />
               <span className="text-gradient">Printing Solutions</span> <br />
               for Tomorrow
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-400 max-w-lg mb-10 md:mb-12 font-light leading-relaxed text-left">
+            <p className="text-lg md:text-xl text-theme-muted max-w-lg mb-10 md:mb-12 font-light leading-relaxed text-left">
               High-performance additive manufacturing for engineers, designers, and innovators. 
               Bring your most complex visions to life with extreme precision.
             </p>
@@ -70,7 +70,7 @@ const Home = () => {
             <div className="flex flex-col md:flex-row w-full md:w-auto gap-5">
               <button 
                 onClick={() => navigate('/catalog')}
-                className="w-full md:w-auto glass border border-white/10 px-10 py-4 md:py-5 rounded-2xl font-bold text-lg hover:bg-white/5 transition-all text-white active:scale-95"
+                className="w-full md:w-auto glass border border-white/10 px-10 py-4 md:py-5 rounded-2xl font-bold text-lg hover:bg-white/5 transition-all text-theme active:scale-95"
               >
                 Explore Services
               </button>
@@ -84,7 +84,7 @@ const Home = () => {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="relative flex justify-center"
           >
-            <div className="relative z-10 p-4 rounded-[40px] glow-border transition-all duration-500 overflow-hidden bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md border border-white/20">
+            <div className="relative z-10 p-4 rounded-[40px] glow-border transition-all duration-500 overflow-hidden bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md border border-theme">
               <img 
                 src={heroPrinter} 
                 alt="Futuristic 3D Printer" 
@@ -109,7 +109,7 @@ const Home = () => {
           <Typography variant="small" className="text-neon-cyan uppercase tracking-widest font-black mb-4 block">
             Our Expertise
           </Typography>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-black text-theme mb-6">
             Professional <span className="text-gradient">Services</span>
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-neon-blue to-neon-purple mx-auto rounded-full" />
@@ -140,12 +140,12 @@ const Home = () => {
               <div className="mb-8 p-4 rounded-2xl bg-white/5 w-fit border border-white/10 text-neon-cyan shadow-inner">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-black mb-6 text-white">{service.title}</h3>
+              <h3 className="text-2xl font-black mb-6 text-theme">{service.title}</h3>
               <ul className="space-y-4 mb-8">
                 {service.items.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-gray-400 group/item">
+                  <li key={idx} className="flex items-center gap-3 text-theme-muted group/item">
                     <div className="w-1.5 h-1.5 rounded-full bg-neon-cyan group-hover/item:scale-150 transition-all" />
-                    <span className="group-hover/item:text-white transition-colors">{item}</span>
+                    <span className="group-hover/item:text-theme transition-colors">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -172,7 +172,7 @@ const Home = () => {
               <Typography variant="small" className="text-neon-cyan uppercase tracking-widest font-black mb-4 block">
                 Why Tamsimision?
               </Typography>
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-8">
+              <h2 className="text-4xl md:text-6xl font-black text-theme mb-8">
                 Engineered for <br />
                 <span className="text-gradient">Extreme Precision</span>
               </h2>
@@ -190,7 +190,7 @@ const Home = () => {
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 flex items-center justify-center text-neon-cyan border border-white/10">
                     {feature.icon}
                   </div>
-                  <h4 className="text-xl font-bold text-white">{feature.feature} {feature.title}</h4>
+                  <h4 className="text-xl font-bold text-theme">{feature.feature} {feature.title}</h4>
                 </div>
               ))}
             </div>
@@ -210,10 +210,10 @@ const Home = () => {
                 whileHover={{ y: -10 }}
                 className="p-8 glass-card border border-white/10 hover:border-neon-cyan/50 text-center flex flex-col items-center justify-center min-h-[220px]"
               >
-                <div className="text-4xl font-black text-white mb-3 tracking-tighter shadow-neon">
+                <div className="text-4xl font-black text-theme mb-3 tracking-tighter shadow-neon">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-400 uppercase tracking-widest font-semibold flex items-center gap-2">
+                <div className="text-sm text-theme-muted uppercase tracking-widest font-semibold flex items-center gap-2">
                    {stat.label}
                 </div>
                 {/* Glow dot */}
@@ -233,7 +233,7 @@ const Home = () => {
           className="relative rounded-[30px] md:rounded-[50px] overflow-hidden p-8 md:p-24 text-left md:text-center border border-white/20"
         >
           {/* Animated Background Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#030014] via-[#0d9488]/30 to-[#0ea5e9]/20 -z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-bg-theme via-[#0d9488]/30 to-[#0ea5e9]/20 -z-10" />
           <div className="absolute -top-1/2 -left-1/4 w-[150%] h-[200%] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 -z-10" />
           
           {/* Shapes */}
@@ -241,10 +241,10 @@ const Home = () => {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-neon-purple/10 blur-[120px] rounded-full pointer-events-none" />
 
           <Sparkles className="w-12 md:w-16 h-12 md:h-16 text-neon-cyan mb-8 md:mx-auto md:mb-10 animate-bounce" />
-          <h2 className="text-4xl md:text-7xl font-black text-white mb-6 md:mb-10 leading-tight">
+          <h2 className="text-4xl md:text-7xl font-black text-theme mb-6 md:mb-10 leading-tight">
             Ready to <span className="text-gradient">print your vision?</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl md:mx-auto mb-10 md:mb-16 font-light">
+          <p className="text-lg md:text-xl text-theme-muted max-w-2xl md:mx-auto mb-10 md:mb-16 font-light">
             Upload your CAD files today and get an instant quote for your project. 
             High performance, rapid turnaround, guaranteed quality.
           </p>
@@ -258,7 +258,7 @@ const Home = () => {
             </label>
             <button 
               onClick={() => window.location.href = 'mailto:sales@tamsimision.com'}
-              className="w-full md:w-auto glass border border-white/20 text-white px-10 py-4 md:py-5 rounded-[20px] md:rounded-3xl font-black text-lg md:text-xl hover:bg-white/10 transition-all flex items-center justify-center gap-3 active:scale-95"
+              className="w-full md:w-auto glass border border-white/20 text-theme px-10 py-4 md:py-5 rounded-[20px] md:rounded-3xl font-black text-lg md:text-xl hover:bg-white/10 transition-all flex items-center justify-center gap-3 active:scale-95"
             >
               Contact Sales <PhoneCall className="w-6 h-6" />
             </button>
